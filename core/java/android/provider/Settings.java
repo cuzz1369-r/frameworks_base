@@ -3506,55 +3506,60 @@ public final class Settings {
         public static final String STATUSBAR_CLOCK_DATE_POSITION = "statusbar_clock_date_position";
 
         /**
-         * Whether to use gesture anywhere feature.
+         * Whether or not to use the app sidebar
+         *
          * @hide
          */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_ENABLED = "gesture_anywhere_enabled";
+        public static final String APP_SIDEBAR_ENABLED = "app_sidebar_enabled";
 
         /**
-         * Position of gesture anywhere trigger.  Value is either Gravity.LEFT or Gravity.RIGHT
+         * User defined transparency level for sidebar
+         *
          * @hide
          */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_POSITION = "gesture_anywhere_position";
+        public static final String APP_SIDEBAR_TRANSPARENCY = "app_sidebar_transparency";
 
         /**
-         * Last time gestures were altered.
-         * Used to determine if gestures should be reloaded by the view.
+         * Disable text labels for app sidebar items
+         *
          * @hide
          */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_CHANGED = "gesture_anywhere_changed";
+        public static final String APP_SIDEBAR_DISABLE_LABELS = "app_sidebar_disable_labels";
 
         /**
-         * Width of the gesture anywhere trigger.
+         * Position of app sidebar
+         *
          * @hide
          */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_TRIGGER_WIDTH = "gesture_anywhere_trigger_width";
+        public static final String APP_SIDEBAR_POSITION = "app_sidebar_position";
 
         /**
-         * Position of gesture anywhere trigger.
+         * Width of the appbar trigger
+         *
          * @hide
          */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_TRIGGER_TOP = "gesture_anywhere_trigger_top";
+        public static final String APP_SIDEBAR_TRIGGER_WIDTH = "app_sidebar_trigger_width";
 
         /**
-         * Height of the gesture anywhere trigger.
+         * Position of appbar trigger
+         *
          * @hide
          */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_TRIGGER_HEIGHT = "gesture_anywhere_trigger_height";
+        public static final String APP_SIDEBAR_TRIGGER_TOP = "app_sidebar_trigger_top";
 
         /**
-         * Whether to display the gesture anywhere trigger region or not.
-         * Used internally for showing the trigger in settings so user can see its placement
+         * Height of the appbar trigger
+         *
          * @hide
          */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_SHOW_TRIGGER = "gesture_anywhere_show_trigger";
+        public static final String APP_SIDEBAR_TRIGGER_HEIGHT = "app_sidebar_trigger_height";
+
+        /**
+         * Whether to display the trigger region or not
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_SHOW_TRIGGER = "app_sidebar_show_trigger";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
