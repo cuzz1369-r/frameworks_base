@@ -143,7 +143,7 @@ public class QSPanel extends ViewGroup {
         return brightnessSliderEnabled;
     }
 
-    protected void updateDetailText() {
+    private void updateDetailText() {
         mDetailDoneButton.setText(R.string.quick_settings_done);
         mDetailSettingsButton.setText(R.string.quick_settings_more_settings);
     }
