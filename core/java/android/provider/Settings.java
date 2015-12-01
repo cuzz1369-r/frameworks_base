@@ -3741,6 +3741,13 @@ public final class Settings {
         public static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
 
         /**
+         * Boolean value whether to link ringtone and notification volume
+         *
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        /**
          * Enable navigation bar double tap gesture on to put device to sleep
          * @hide
          */
