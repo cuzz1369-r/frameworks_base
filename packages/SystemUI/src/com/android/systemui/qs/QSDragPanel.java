@@ -900,6 +900,8 @@ public class QSDragPanel extends QSPanel implements View.OnDragListener, View.On
                     @Override
                     public void onAnimationStart(Animator animation) {
                         mDraggingRecord.tileView.setAlpha(1);
+                        mDraggingRecord.tileView.setBackground(
+                                mDraggingRecord.tileView.newTileBackground());
                     }
 
                     @Override
@@ -1005,14 +1007,15 @@ public class QSDragPanel extends QSPanel implements View.OnDragListener, View.On
         final DragTileRecord record = (DragTileRecord) getRecord(v);
         if (record == null) {
             // TODO couldn't find a matching tag?
-            Log.e(TAG, "got a null record on touch down.");
+            Log.e(TAG, "got a null record on touh down.");
             return false;
         }
 
         mDraggingRecord = record;
 
         mDraggingRecord.tileView.setAlpha(0);
-        mDraggingRecord.tileView.setDual(false, false);
+        mDraggingRecord.tileView.setTileBackground(null);
+        mDraggingRecord.tileView.setDual(false);
         TileShadow mTileShadow = new TileShadow(mDraggingRecord.tileView);
 
         v.startDrag(null, mTileShadow, null, 0);
@@ -1288,7 +1291,7 @@ public class QSDragPanel extends QSPanel implements View.OnDragListener, View.On
                         .setListener(new AnimatorListenerAdapter() {
                             @Override
                             public void onAnimationEnd(Animator animation) {
-                                if (ti.tileView.setDual(dual, ti.tile.hasDualTargetsDetails())) {
+                                if (ti.tileView.setDual(dual)) {
                                     if (DEBUG_DRAG) {
                                         Log.w(TAG, ti + " changed dual state to : "
                                                 + ti.tileView.isDual());
@@ -1346,12 +1349,9 @@ public class QSDragPanel extends QSPanel implements View.OnDragListener, View.On
         }
         String[] defaults =
                 getContext().getString(R.string.quick_settings_tiles_default).split(",");
-        int availableSize = defaults.length + 1 - (tiles.size() - numBroadcast);
-        if (availableSize < 1) {
-            availableSize = 1;
-        }
-        final String[] available = new String[availableSize];
-        final String[] availableTiles = new String[availableSize];
+        final String[] available = new String[defaults.length + 1
+                - (tiles.size() - numBroadcast)];
+        final String[] availableTiles = new String[available.length];
         int index = 0;
         for (int i = 0; i < defaults.length; i++) {
             if (tiles.contains(defaults[i])) {
