@@ -48,8 +48,6 @@ public class TunerFragment extends PreferenceFragment {
 
     private static final String KEY_BATTERY_PCT = "battery_pct";
 
-    public static final String SETTING_SEEN_TUNER_WARNING = "seen_tuner_warning";
-
     private final SettingObserver mSettingObserver = new SettingObserver();
 
     private SwitchPreference mBatteryPct;

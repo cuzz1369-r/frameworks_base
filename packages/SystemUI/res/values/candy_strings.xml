@@ -59,10 +59,6 @@
     <!-- Screen off QS tile -->
     <string name="quick_settings_screen_off">Screen off</string>
 
-    <!-- Screen timeout QS tile -->
-    <string name="quick_settings_timeout_label">Timeout</string>
-    <string name="quick_settings_screen_timeout_detail_title">Screen timeout</string>
-
     <!-- Brightness QS Tile -->
     <string name="quick_settings_brightness">Brightness</string>
 
