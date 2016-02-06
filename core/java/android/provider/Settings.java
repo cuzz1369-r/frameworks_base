@@ -3754,6 +3754,18 @@ public final class Settings {
                 "key_app_switch_double_tap_action";
 
         /**
+         * Hide lockscreen date
+         * @hide
+         */
+        public static final String HIDE_LOCKSCREEN_DATE = "hide_lockscreen_date";
+
+        /**
+         * Hide lockscreen clock
+         * @hide
+         */
+        public static final String HIDE_LOCKSCREEN_CLOCK = "hide_lockscreen_clock";
+
+        /**
          * Action to perform when the camera key is pressed. (default: LAUNCH_CAMERA)
          * (See ButtonsConstants.java for valid values)
          * @hide
